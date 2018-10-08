@@ -39,7 +39,7 @@ export default class App extends Component<Props> {
               itemHeight={30}
               selectedItem={2}
               textSize={18}
-              onSelectedItemChanged={ (e) => {this.setState({picker1: e.label}) }
+              onSelectedItemChanged={ (e) => {this.setState({picker1: e.label}) } }
               style={styles.pickerView} />
 
               <PickerView 
