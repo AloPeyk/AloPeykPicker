@@ -1,0 +1,22 @@
+{
+  "name": "alopeyk-picker",
+  "version": "1.0.1",
+  "description": "Picker component for Android",
+  "main": "src/index.js",
+  "nativePackage": true,
+  "scripts": {
+    "postinstall": "rm -rf node_modules/alopeyk-picker/node_modules node_modules/alopeyk-picker/example",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "react": "^16.4.1"
+  },
+  "keywords": [
+    "react-native-component",
+    "react-component",
+    "react-native"
+  ],
+  "author": "Alopeyk",
+  "homepage": "https://github.com/AloPeyk/AloPeykPicker",
+  "license": "MIT"
+}
