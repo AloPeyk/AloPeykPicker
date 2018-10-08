@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/hosseinahmadi/Repositories/plugin-list-picker/example/node_modules/alopeyk-picker/android/src/main/shaders"/></dataSet><dataSet config="release"><source path="/Users/hosseinahmadi/Repositories/plugin-list-picker/example/node_modules/alopeyk-picker/android/src/release/shaders"/></dataSet></merger>

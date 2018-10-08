@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/node_modules/alopeyk-picker/android/build/intermediates/res/merged/release/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/4f44fc3630c0cdf529b88e67ed27010dec4e9abd/output/res/drawable-v21/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/node_modules/alopeyk-picker/android/build/intermediates/res/merged/release/drawable-v21/notification_action_background.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/37f1cd44f0ce346a9352ccc494410a627e937fd8/output/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/node_modules/alopeyk-picker/android/build/intermediates/res/merged/release/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/4f44fc3630c0cdf529b88e67ed27010dec4e9abd/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/node_modules/alopeyk-picker/android/build/intermediates/res/merged/release/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/4f44fc3630c0cdf529b88e67ed27010dec4e9abd/output/res/drawable-v21/abc_edit_text_material.xml"
+    }
+]

@@ -1,0 +1,82 @@
+[
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/4f44fc3630c0cdf529b88e67ed27010dec4e9abd/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/anim/tooltip_exit.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/4f44fc3630c0cdf529b88e67ed27010dec4e9abd/output/res/anim/tooltip_exit.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/4f44fc3630c0cdf529b88e67ed27010dec4e9abd/output/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/4f44fc3630c0cdf529b88e67ed27010dec4e9abd/output/res/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/anim/top_defaults_view_pickerview_slide_out_to_bottom.xml",
+        "source": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/node_modules/alopeyk-picker/android/build/intermediates/bundles/default/res/anim/top_defaults_view_pickerview_slide_out_to_bottom.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/anim/catalyst_fade_in.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/ec212259b66a3702f1dc49302bf48cf911f0a6e9/output/res/anim/catalyst_fade_in.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/anim/top_defaults_view_pickerview_slide_in_from_bottom.xml",
+        "source": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/node_modules/alopeyk-picker/android/build/intermediates/bundles/default/res/anim/top_defaults_view_pickerview_slide_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/4f44fc3630c0cdf529b88e67ed27010dec4e9abd/output/res/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/anim/catalyst_fade_out.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/ec212259b66a3702f1dc49302bf48cf911f0a6e9/output/res/anim/catalyst_fade_out.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/4f44fc3630c0cdf529b88e67ed27010dec4e9abd/output/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/anim/catalyst_slide_up.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/ec212259b66a3702f1dc49302bf48cf911f0a6e9/output/res/anim/catalyst_slide_up.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/anim/tooltip_enter.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/4f44fc3630c0cdf529b88e67ed27010dec4e9abd/output/res/anim/tooltip_enter.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/anim/catalyst_push_up_out.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/ec212259b66a3702f1dc49302bf48cf911f0a6e9/output/res/anim/catalyst_push_up_out.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/4f44fc3630c0cdf529b88e67ed27010dec4e9abd/output/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/anim/catalyst_slide_down.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/ec212259b66a3702f1dc49302bf48cf911f0a6e9/output/res/anim/catalyst_slide_down.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/4f44fc3630c0cdf529b88e67ed27010dec4e9abd/output/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/4f44fc3630c0cdf529b88e67ed27010dec4e9abd/output/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/4f44fc3630c0cdf529b88e67ed27010dec4e9abd/output/res/anim/abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/4f44fc3630c0cdf529b88e67ed27010dec4e9abd/output/res/anim/abc_popup_exit.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/anim/catalyst_push_up_in.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/ec212259b66a3702f1dc49302bf48cf911f0a6e9/output/res/anim/catalyst_push_up_in.xml"
+    }
+]

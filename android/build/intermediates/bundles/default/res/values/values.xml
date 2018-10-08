@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="boolean" name="autoFitSize"/>
+    <attr format="boolean" name="curved"/>
+    <attr format="boolean" name="isCyclic"/>
+    <attr format="dimension" name="itemHeight"/>
+    <attr format="integer" name="preferredMaxOffsetItemCount"/>
+    <attr format="color" name="textColor"/>
+    <attr format="dimension" name="textSize"/>
+    <declare-styleable name="DateTimePickerView"><attr format="enum" name="type">
+            <enum name="dateTime" value="0"/>
+            <enum name="dateHourMinute" value="1"/>
+            <enum name="yearMonthDayHourMinute" value="2"/>
+            <enum name="yearMonthDay" value="3"/>
+        </attr><attr format="enum" name="minutesInterval">
+            <enum name="one" value="1"/>
+            <enum name="five" value="5"/>
+            <enum name="ten" value="10"/>
+            <enum name="fifteen" value="15"/>
+            <enum name="twenty" value="20"/>
+            <enum name="thirty" value="30"/>
+        </attr></declare-styleable>
+    <declare-styleable name="DivisionPickerView"><attr format="enum" name="divisionPickerType">
+            <enum name="all" value="0"/>
+            <enum name="provinceAndCity" value="1"/>
+        </attr></declare-styleable>
+    <declare-styleable name="PickerView"><attr name="preferredMaxOffsetItemCount"/><attr name="itemHeight"/><attr name="textSize"/><attr name="textColor"/><attr name="isCyclic"/><attr name="autoFitSize"/><attr name="curved"/></declare-styleable>
+    <declare-styleable name="PickerViewGroup"><attr name="preferredMaxOffsetItemCount"/><attr name="itemHeight"/><attr name="textSize"/><attr name="textColor"/><attr name="autoFitSize"/><attr name="curved"/></declare-styleable>
+    <string name="today">Today</string>
+    <style name="BottomFullWidthDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <style name="DialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/top_defaults_view_pickerview_slide_in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/top_defaults_view_pickerview_slide_out_to_bottom</item>
+    </style>
+</resources>

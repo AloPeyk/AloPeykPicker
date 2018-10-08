@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher_round.png",
+        "source": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
+        "source": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    }
+]

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/hosseinahmadi/.android/build-cache/ec212259b66a3702f1dc49302bf48cf911f0a6e9/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="e7a850c25a7efbd533c496ab482c980fdafac58d">
+        <dex dex="/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/pre-dexed/debug/classes_764c6e838d918354b1601a24c111ccb6fc21920f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/hosseinahmadi/Repositories/plugin-list-picker/example/node_modules/alopeyk-picker/android/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="5667a97fbed076cc3beeee0f83ae63a63c2342f1">
+        <dex dex="/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/pre-dexed/debug/classes_a366413dc7d4f2a3f55a81d699ef1baf6442f920.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/hosseinahmadi/.android/build-cache/ec212259b66a3702f1dc49302bf48cf911f0a6e9/output/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_329130b4027cf1e89027752a2b8491351fc96782.jar" />
+    </item>
+
+</items>

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/37f1cd44f0ce346a9352ccc494410a627e937fd8/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/37f1cd44f0ce346a9352ccc494410a627e937fd8/output/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/37f1cd44f0ce346a9352ccc494410a627e937fd8/output/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/hosseinahmadi/Repositories/plugin-list-picker/example/android/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/Users/hosseinahmadi/.android/build-cache/37f1cd44f0ce346a9352ccc494410a627e937fd8/output/res/layout-v21/notification_action.xml"
+    }
+]
