@@ -57,9 +57,9 @@ import {PickerView, DatePickerView} from 'alopeyk-picker';
 |Props                	|Type                   |is Required  |
 |-----------------------|-----------------------|-------------|
 |`onSelectedItemChanged`|`'func'`           	|-            |
-|`selectedDate`			|`'Date' | 'number'`	|-            |
-|`startDate`			|`'Date' | 'number'`	|-            |
-|`endDate`				|`'Date' | 'number'`	|-            |
+|`selectedDate`			|`'Date'` `'number'`	|-            |
+|`startDate`			|`'Date'` `'number'`	|-            |
+|`endDate`				|`'Date'` `'number'`	|-            |
 |`textSize`				|`'number'`            	|-            |
 |`textColor`			|`'string'`            	|-            |
 |`backgroundColor`		|`'string'`            	|-            |
