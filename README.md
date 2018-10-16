@@ -1,5 +1,10 @@
 # alopeyk-picker
 
+### iOS like Picker plugin for android
+
+![Alt Text](https://i.imgur.com/DAST9A0.gif)
+
+
 ## Getting started
 
 `$ npm install alopeyk-picker --save`
