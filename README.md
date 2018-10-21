@@ -44,29 +44,31 @@ import {PickerView, DatePickerView} from 'alopeyk-picker';
 ## PickerView Properties
 
 
-|Props                	|Type                   |is Required  |
-|-----------------------|-----------------------|-------------|
-|`onSelectedItemChanged`|`'func'`           	|-            |
-|`selectedItem`			|`'number'`				|-            |
-|`textSize`				|`'number'`            	|-            |
-|`cyclic`				|`'bool'`            	|-            |
-|`textColor`			|`'string'`            	|-            |
-|`backgroundColor`		|`'string'`            	|-            |
-|`items`				|`'array'`            	|True         |
-|`itemHeight`			|`'number'`            	|-            |
+|Props   	             	|Type                   |is Required  |
+|---------------------------|-----------------------|-------------|
+|`onSelectedItemChanged`	|`'func'`           	|-            |
+|`selectedItem`				|`'number'`				|-            |
+|`textSize`					|`'number'`            	|-            |
+|`cyclic`					|`'bool'`            	|-            |
+|`textColor`				|`'string'`            	|-            |
+|`backgroundColor`			|`'string'`            	|-            |
+|`selectedItemBorderColor`	|`'string'`            	|-            |
+|`items`					|`'array'`            	|True         |
+|`itemHeight`				|`'number'`            	|-            |
 
 
 ## DatePickerView Properties
 
 
-|Props                	|Type                   |is Required  |
-|-----------------------|-----------------------|-------------|
-|`onSelectedItemChanged`|`'func'`           	|-            |
-|`selectedDate`			|`'Date'` `'number'`	|-            |
-|`startDate`			|`'Date'` `'number'`	|-            |
-|`endDate`				|`'Date'` `'number'`	|-            |
-|`textSize`				|`'number'`            	|-            |
-|`textColor`			|`'string'`            	|-            |
-|`backgroundColor`		|`'string'`            	|-            |
-|`itemHeight`			|`'number'`            	|-            |
+|Props                		|Type                   |is Required  |
+|---------------------------|-----------------------|-------------|
+|`onSelectedItemChanged`	|`'func'`           	|-            |
+|`selectedDate`				|`'Date'` `'number'`	|-            |
+|`startDate`				|`'Date'` `'number'`	|-            |
+|`endDate`					|`'Date'` `'number'`	|-            |
+|`textSize`					|`'number'`            	|-            |
+|`textColor`				|`'string'`            	|-            |
+|`backgroundColor`			|`'string'`            	|-            |
+|`selectedItemBorderColor`	|`'string'`            	|-            |
+|`itemHeight`				|`'number'`            	|-            |
 

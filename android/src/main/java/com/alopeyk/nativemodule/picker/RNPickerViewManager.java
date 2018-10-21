@@ -95,6 +95,11 @@ public class RNPickerViewManager extends SimpleViewManager<PickerView> {
                 case String:
                     output.add(new Item(i, items.getString(i)));
                     break;
+                case Number:
+                    output.add(new Item(i, String.valueOf(items.getInt(i))));
+                    break;
+                default:
+                    output.add(new Item(i, "[Object]"));
             }
         }
         ((SimpleAdapter) view.getAdapter()).setItems(output);
@@ -138,6 +143,11 @@ public class RNPickerViewManager extends SimpleViewManager<PickerView> {
     public void setItemHeight(PickerView pickerView, int height){
         if(height < 0) return;
         pickerView.setItemHeight(Utils.dp(pickerView.getContext(), height));
+    }
+
+    @ReactProp(name = "selectedItemBorderColor", defaultInt = 0x7f777777, customType = "Color")
+    public void setSelectedItemBorderColor(PickerView view, int color) {
+        view.setSelectedItemBorderColor(color);
     }
 
     private void sendEvent(View view, String eventName, @Nullable WritableMap params) {

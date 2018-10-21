@@ -58,5 +58,6 @@ DatePickerView.propTypes = {
     textSize: PropTypes.number,
     textColor: PropTypes.string,
     backgroundColor: PropTypes.string,
+    selectedItemBorderColor: PropTypes.string,
     itemHeight: PropTypes.number,
 }

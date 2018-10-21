@@ -38,6 +38,7 @@ PickerView.propTypes = {
     cyclic: PropTypes.bool,
     textColor: PropTypes.string,
     backgroundColor: PropTypes.string,
+    selectedItemBorderColor: PropTypes.string,
     items: PropTypes.array.isRequired,
     itemHeight: PropTypes.number,
 }

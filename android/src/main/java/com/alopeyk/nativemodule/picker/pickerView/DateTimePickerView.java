@@ -116,6 +116,16 @@ public class DateTimePickerView extends PickerViewGroup {
         if(timePickerView != null) timePickerView.setTextColor(textColor);
     }
 
+    public void setSelectedItemBorderColor(int color) {
+        if(yearPickerView != null) yearPickerView.setSelectedItemBorderColor(color);
+        if(monthPickerView != null) monthPickerView.setSelectedItemBorderColor(color);
+        if(dayPickerView != null) dayPickerView.setSelectedItemBorderColor(color);
+        if(datePickerView != null) datePickerView.setSelectedItemBorderColor(color);
+        if(hourPickerView != null) hourPickerView.setSelectedItemBorderColor(color);
+        if(minutePickerView != null) minutePickerView.setSelectedItemBorderColor(color);
+        if(timePickerView != null) timePickerView.setSelectedItemBorderColor(color);
+    }
+
     public void setTextSize(int textSize) {
         if(yearPickerView != null) yearPickerView.setTextSize(textSize);
         if(monthPickerView != null) monthPickerView.setTextSize(textSize);

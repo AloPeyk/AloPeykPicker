@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.alopeyk.nativemodule.picker.pickerView.DateTimePickerView;
+import com.alopeyk.nativemodule.picker.pickerView.PickerView;
 import com.alopeyk.nativemodule.picker.pickerView.Utils;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactContext;
@@ -107,6 +108,11 @@ public class RNDatePickerViewManager extends SimpleViewManager<DateTimePickerVie
     public void setItemHeight(DateTimePickerView view, int height){
         if(height < 0) return;
         view.setItemHeight(height);
+    }
+
+    @ReactProp(name = "selectedItemBorderColor", defaultInt = 0x7f777777, customType = "Color")
+    public void setSelectedItemBorderColor(DateTimePickerView view, int color) {
+        view.setSelectedItemBorderColor(color);
     }
 
     @javax.annotation.Nullable

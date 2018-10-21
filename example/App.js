@@ -47,6 +47,7 @@ export default class App extends Component<Props> {
               textColor="#333"
               cyclic={false}
               items={getData('bar', 20)}
+              itemHeight={30}
               selectedItem={6}
               textSize={18} 
               onSelectedItemChanged={ (e) => {this.setState({picker2: e.label})} }
@@ -59,6 +60,7 @@ export default class App extends Component<Props> {
             <View style={styles.row}>
               <DatePickerView
                 backgroundColor="#333"
+                selectedItemBorderColor="#777"
                 textColor="#ccc"
                 textSize={18}
                 itemHeight={90}

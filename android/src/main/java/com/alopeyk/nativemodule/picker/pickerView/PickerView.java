@@ -7,6 +7,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
+import android.graphics.PorterDuff;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
@@ -76,6 +77,7 @@ public class PickerView extends View {
     private float radius;
     private Camera camera;
     private Matrix matrix;
+    private int selectedItemBorderColor = 0x7f777777;
 
     public interface PickerItem {
         String getText();
@@ -156,6 +158,7 @@ public class PickerView extends View {
             };
         } else {
             selectedItemDrawable = Utils.getDrawable(getContext(), R.drawable.top_defaults_view_pickerview_selected_item);
+            selectedItemDrawable.setColorFilter(selectedItemBorderColor, PorterDuff.Mode.MULTIPLY);
         }
 
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.PickerView);
@@ -347,6 +350,14 @@ public class PickerView extends View {
             this.curved = curved;
             invalidate();
             requestLayout();
+        }
+    }
+
+    public void setSelectedItemBorderColor(int color){
+        if(selectedItemBorderColor != color){
+            selectedItemBorderColor = color;
+            selectedItemDrawable.setColorFilter(selectedItemBorderColor, PorterDuff.Mode.MULTIPLY);
+            invalidate();
         }
     }
 
