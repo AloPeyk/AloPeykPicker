@@ -1,9 +1,9 @@
-package com.alopeyk.nativemodule.picker;
+package com.alopeyk.nativemodule.picker.pickerView;
 
 import android.content.Context;
 import android.view.ViewStub;
 
-import com.alopeyk.nativemodule.R;
+import com.alopeyk.nativemodule.picker.R;
 
 public class PickerViewDialog extends BottomFullWidthDialog {
 

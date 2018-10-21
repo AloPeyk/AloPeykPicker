@@ -1,6 +1,6 @@
 {
   "name": "alopeyk-picker",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Picker component for Android",
   "main": "src/index.js",
   "nativePackage": true,

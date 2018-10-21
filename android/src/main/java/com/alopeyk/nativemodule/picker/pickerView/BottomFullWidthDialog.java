@@ -1,4 +1,4 @@
-package com.alopeyk.nativemodule.picker;
+package com.alopeyk.nativemodule.picker.pickerView;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -7,7 +7,7 @@ import android.view.Gravity;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.alopeyk.nativemodule.R;
+import com.alopeyk.nativemodule.picker.R;
 
 public class BottomFullWidthDialog extends Dialog {
     private Context context;

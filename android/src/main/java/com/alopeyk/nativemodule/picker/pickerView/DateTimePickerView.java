@@ -1,16 +1,16 @@
-package com.alopeyk.nativemodule.picker;
+package com.alopeyk.nativemodule.picker.pickerView;
 
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 
-import com.alopeyk.nativemodule.R;
+import com.alopeyk.nativemodule.picker.R;
 
 import java.lang.ref.WeakReference;
 import java.util.Calendar;
 import java.util.Locale;
 
-import static com.alopeyk.nativemodule.picker.Utils.checkNotNull;
+import static com.alopeyk.nativemodule.picker.pickerView.Utils.checkNotNull;
 
 @SuppressWarnings("unused")
 public class DateTimePickerView extends PickerViewGroup {

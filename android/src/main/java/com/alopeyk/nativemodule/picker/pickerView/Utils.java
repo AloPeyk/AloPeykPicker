@@ -1,4 +1,4 @@
-package com.alopeyk.nativemodule.picker;
+package com.alopeyk.nativemodule.picker.pickerView;
 
 import android.content.Context;
 import android.content.res.Resources;
