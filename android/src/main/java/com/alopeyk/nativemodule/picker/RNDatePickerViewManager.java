@@ -1,12 +1,12 @@
-package com.alopeyk.nativemodule;
+package com.alopeyk.nativemodule.picker;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.support.annotation.Nullable;
 import android.view.View;
 
-import com.alopeyk.nativemodule.picker.DateTimePickerView;
-import com.alopeyk.nativemodule.picker.Utils;
+import com.alopeyk.nativemodule.picker.pickerView.DateTimePickerView;
+import com.alopeyk.nativemodule.picker.pickerView.Utils;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.WritableMap;

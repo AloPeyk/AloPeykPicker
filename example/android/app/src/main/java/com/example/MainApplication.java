@@ -3,7 +3,7 @@ package com.example;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-import com.alopeyk.nativemodule.RNPickerPackage;
+import com.alopeyk.nativemodule.picker.RNPickerPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;

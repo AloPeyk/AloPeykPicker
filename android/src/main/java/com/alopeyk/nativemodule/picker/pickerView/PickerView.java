@@ -1,4 +1,4 @@
-package com.alopeyk.nativemodule.picker;
+package com.alopeyk.nativemodule.picker.pickerView;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -18,18 +18,13 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.widget.OverScroller;
-import android.widget.Toast;
 
-import com.alopeyk.nativemodule.R;
-import com.facebook.react.bridge.Arguments;
-import com.facebook.react.bridge.ReactContext;
-import com.facebook.react.bridge.WritableMap;
-import com.facebook.react.uimanager.events.RCTEventEmitter;
+import com.alopeyk.nativemodule.picker.R;
 
 import java.lang.ref.WeakReference;
 import java.util.List;
 
-import static com.alopeyk.nativemodule.picker.Utils.checkNotNull;
+import static com.alopeyk.nativemodule.picker.pickerView.Utils.checkNotNull;
 
 @SuppressWarnings("unused")
 public class PickerView extends View {

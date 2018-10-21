@@ -1,4 +1,4 @@
-package com.alopeyk.nativemodule.picker;
+package com.alopeyk.nativemodule.picker.pickerView;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -7,9 +7,9 @@ import android.util.AttributeSet;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.alopeyk.nativemodule.R;
+import com.alopeyk.nativemodule.picker.R;
 
-import static com.alopeyk.nativemodule.picker.PickerView.DEFAULT_MAX_OFFSET_ITEM_COUNT;
+import static com.alopeyk.nativemodule.picker.pickerView.PickerView.DEFAULT_MAX_OFFSET_ITEM_COUNT;
 
 @SuppressWarnings("unused")
 public class PickerViewGroup extends LinearLayout {

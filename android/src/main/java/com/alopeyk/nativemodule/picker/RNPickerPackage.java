@@ -1,5 +1,5 @@
 
-package com.alopeyk.nativemodule;
+package com.alopeyk.nativemodule.picker;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;

@@ -1,6 +1,6 @@
-package com.alopeyk.nativemodule;
+package com.alopeyk.nativemodule.picker;
 
-import com.alopeyk.nativemodule.picker.PickerView;
+import com.alopeyk.nativemodule.picker.pickerView.PickerView;
 
 import java.util.ArrayList;
 import java.util.List;
