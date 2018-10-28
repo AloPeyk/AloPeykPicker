@@ -7,7 +7,9 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
+import android.graphics.PorterDuff;
 import android.graphics.Rect;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.text.Layout;
@@ -76,6 +78,8 @@ public class PickerView extends View {
     private float radius;
     private Camera camera;
     private Matrix matrix;
+    private int selectedItemBorderColor = 0x7f777777;
+    private Typeface typeface;
 
     public interface PickerItem {
         String getText();
@@ -156,6 +160,7 @@ public class PickerView extends View {
             };
         } else {
             selectedItemDrawable = Utils.getDrawable(getContext(), R.drawable.top_defaults_view_pickerview_selected_item);
+            selectedItemDrawable.setColorFilter(selectedItemBorderColor, PorterDuff.Mode.MULTIPLY);
         }
 
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.PickerView);
@@ -350,6 +355,14 @@ public class PickerView extends View {
         }
     }
 
+    public void setSelectedItemBorderColor(int color){
+        if(selectedItemBorderColor != color){
+            selectedItemBorderColor = color;
+            selectedItemDrawable.setColorFilter(selectedItemBorderColor, PorterDuff.Mode.MULTIPLY);
+            invalidate();
+        }
+    }
+
     public int getSelectedItemPosition() {
         return clampItemPosition(selectedItemPosition);
     }
@@ -490,6 +503,9 @@ public class PickerView extends View {
         textPaint.setTextSize(textSize);
         textPaint.setColor(textColor);
         textPaint.getTextBounds(text, 0, text.length(), textBounds);
+        if(typeface != null){
+            textPaint.setTypeface(typeface);
+        }
 
         if (autoFitSize) {
             while (getMeasuredWidth() < textBounds.width() && textPaint.getTextSize() > 16) {
@@ -733,6 +749,16 @@ public class PickerView extends View {
         }
     }
 
+    @Override
+    public void setBackgroundColor(int color) {
+        super.setBackgroundColor(color);
+        int gradient[] = new int[]{
+                (color & 0x00ffffff) + 0xcf000000,
+                (color & 0x00ffffff) + 0x9f000000,
+                (color & 0x00ffffff) + 0x5f000000
+        };
+        setGradientColors(gradient);
+    }
 
     public void setGradientColors(int[] gradientColors) {
         if(gradientColors.equals(gradientColors)){
@@ -740,5 +766,11 @@ public class PickerView extends View {
             clearGradientsCache();
             invalidate();
         }
+    }
+
+    public void setTypeFace(Typeface typeFace){
+        if(typeFace == null || typeFace.equals(this.typeface)) return;
+        this.typeface = typeFace;
+        invalidate();
     }
 }

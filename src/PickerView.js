@@ -34,10 +34,12 @@ export default class PickerView extends Component {
 PickerView.propTypes = {
 	onSelectedItemChanged: PropTypes.func,
     selectedItem: PropTypes.number,
-    textSize: PropTypes.number,
+    fontSize: PropTypes.number,
+    fontFamily: PropTypes.string,
     cyclic: PropTypes.bool,
-    textColor: PropTypes.string,
+    color: PropTypes.string,
     backgroundColor: PropTypes.string,
+    selectedItemBorderColor: PropTypes.string,
     items: PropTypes.array.isRequired,
     itemHeight: PropTypes.number,
 }

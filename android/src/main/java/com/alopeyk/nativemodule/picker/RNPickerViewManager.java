@@ -1,8 +1,9 @@
 package com.alopeyk.nativemodule.picker;
 
-import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.alopeyk.nativemodule.picker.pickerView.PickerView;
 import com.alopeyk.nativemodule.picker.pickerView.SimpleAdapter;
@@ -10,12 +11,14 @@ import com.alopeyk.nativemodule.picker.pickerView.Utils;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.ReadableArray;
+import com.facebook.react.bridge.ReadableType;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.common.MapBuilder;
-import com.facebook.react.uimanager.SimpleViewManager;
+import com.facebook.react.uimanager.BaseViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
 import com.facebook.react.uimanager.events.RCTEventEmitter;
+import com.facebook.react.views.text.ReactFontManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +30,7 @@ import java.util.Map;
  * Email:       mahmoodi.dev@gmail.com
  * Website:     alirezamh.com
  */
-public class RNPickerViewManager extends SimpleViewManager<PickerView> {
+public class RNPickerViewManager extends BaseViewManager<PickerView, PickerShadowNode> {
     private static final String VIEW_NAME = "PickerView";
     private static final String TAG = RNPickerViewManager.class.getSimpleName();
 
@@ -63,37 +66,35 @@ public class RNPickerViewManager extends SimpleViewManager<PickerView> {
                 .build();
     }
 
-    @ReactProp(name = "backgroundColor", defaultInt = Color.WHITE, customType = "Color")
-    public void setBackgroundColor(PickerView view, int backgroundColor) {
-        int gradient[] = new int[]{
-                (backgroundColor & 0x00ffffff) + 0xcf000000,
-                (backgroundColor & 0x00ffffff) + 0x9f000000,
-                (backgroundColor & 0x00ffffff) + 0x5f000000
-        };
-        view.setGradientColors(gradient);
-        view.setBackgroundColor(backgroundColor);
-    }
-
-    @ReactProp(name = "textColor", defaultInt = Color.BLACK, customType = "Color")
-    public void setTextColor(PickerView view, int textColor) {
-        view.setTextColor(textColor);
-    }
-
-    @ReactProp(name = "textSize", defaultInt = 18)
-    public void setTextSize(PickerView view, int textSize) {
-        view.setTextSize(Utils.dp(view.getContext(), textSize));
-    }
-
     @ReactProp(name = "items")
     public void setItems(PickerView view, ReadableArray items) {
         List<Item> output = new ArrayList<>();
         for (int i = 0; i < items.size(); i++) {
 
             switch (items.getType(i)) {
-                case Null:
-                    break;
                 case String:
                     output.add(new Item(i, items.getString(i)));
+                    break;
+                case Number:
+                    String label;
+                    double valD = items.getDouble(i);
+                    if(valD % 1 > 0.d){
+                        label = String.valueOf(valD);
+                    }else{
+                        label = String.valueOf(items.getInt(i));
+                    }
+                    output.add(new Item(i, label));
+                    break;
+                case Boolean:
+                    output.add(new Item(i, String.valueOf(items.getBoolean(i))));
+                    break;
+                case Map:
+                    output.add(new Item(i, "[Object]"));
+                    break;
+                case Array:
+                    output.add(new Item(i, "[Array]"));
+                    break;
+                case Null:
                     break;
             }
         }
@@ -129,22 +130,46 @@ public class RNPickerViewManager extends SimpleViewManager<PickerView> {
         });
     }
 
-    @ReactProp(name = "cyclic", defaultBoolean = false)
-    public void setCyclic(PickerView pickerView, boolean enable){
-        pickerView.setCyclic(enable);
-    }
-
-    @ReactProp(name = "itemHeight", defaultInt = -1)
-    public void setItemHeight(PickerView pickerView, int height){
-        if(height < 0) return;
-        pickerView.setItemHeight(Utils.dp(pickerView.getContext(), height));
-    }
-
     private void sendEvent(View view, String eventName, @Nullable WritableMap params) {
         ((ReactContext)view.getContext())
                 .getJSModule(RCTEventEmitter.class)
                 .receiveEvent(view.getId(), eventName, params);
     }
 
+    @Override
+    public PickerShadowNode createShadowNodeInstance() {
+        return new PickerShadowNode();
+    }
 
+
+    @Override
+    public Class<? extends PickerShadowNode> getShadowNodeClass() {
+        return PickerShadowNode.class;
+    }
+
+    @Override
+    public void updateExtraData(PickerView root, Object extraData) {
+        PickerUpdate update = (PickerUpdate) extraData;
+        root.setLayoutParams(new ViewGroup.LayoutParams((int)update.getWidth(), (int)update.getHeight()));
+        root.setBackgroundColor(update.getBackgroundColor());
+        root.setCyclic(update.isCyclic());
+        root.setItemHeight(Utils.dp(root.getContext(), update.getItemHeight()));
+        root.setSelectedItemBorderColor(update.getSelectedItemBorderColor());
+        root.setTextSize(Utils.dp(root.getContext(), update.getFontSize()));
+        root.setTextColor(update.getColor());
+
+        if(!update.getFontFamily().isEmpty()){
+            Typeface typeface = ReactFontManager.getInstance().getTypeface(
+                    update.getFontFamily(),
+                    update.getFontStyle(),
+                    root.getContext().getAssets());
+
+            root.setTypeFace(typeface);
+        }
+    }
+
+    @Override
+    protected void onAfterUpdateTransaction(PickerView view) {
+        super.onAfterUpdateTransaction(view);
+    }
 }

@@ -39,6 +39,9 @@
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		E2B3A76D214E6E4800C11826 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B3A76C214E6E4800C11826 /* Test.swift */; };
 		8878D43CF55A40889F5D0EC5 /* libRNPicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE49B9921B84F9AAEA5F957 /* libRNPicker.a */; };
+		AD7B45902902463EB9032763 /* IRANSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD197C1F1DAC418BB562FB91 /* IRANSans.ttf */; };
+		33DEF7192574498F95801B31 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BE94C16707641BDBD28B3EA /* Roboto-Regular.ttf */; };
+		5D0F18104B7D428990F5A8EC /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C40563EF1B0B4CDB93FF43DA /* Roboto-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -348,6 +351,9 @@
 		E2B3A76C214E6E4800C11826 /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		163F03A4243E4EE5BCC70D45 /* RNPicker.xcodeproj */ = {isa = PBXFileReference; name = "RNPicker.xcodeproj"; path = "../node_modules/alopeyk-picker/ios/RNPicker.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		DEE49B9921B84F9AAEA5F957 /* libRNPicker.a */ = {isa = PBXFileReference; name = "libRNPicker.a"; path = "libRNPicker.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		BD197C1F1DAC418BB562FB91 /* IRANSans.ttf */ = {isa = PBXFileReference; name = "IRANSans.ttf"; path = "../assets/fonts/IRANSans.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4BE94C16707641BDBD28B3EA /* Roboto-Regular.ttf */ = {isa = PBXFileReference; name = "Roboto-Regular.ttf"; path = "../assets/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C40563EF1B0B4CDB93FF43DA /* Roboto-Light.ttf */ = {isa = PBXFileReference; name = "Roboto-Light.ttf"; path = "../assets/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -586,6 +592,7 @@
 				00E356EF1AD99517003FC87E /* exampleTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				EDDAA3C28DC5452D98CD88A9 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -611,6 +618,17 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		EDDAA3C28DC5452D98CD88A9 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				BD197C1F1DAC418BB562FB91 /* IRANSans.ttf */,
+				4BE94C16707641BDBD28B3EA /* Roboto-Regular.ttf */,
+				C40563EF1B0B4CDB93FF43DA /* Roboto-Light.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -1061,6 +1079,9 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				AD7B45902902463EB9032763 /* IRANSans.ttf in Resources */,
+				33DEF7192574498F95801B31 /* Roboto-Regular.ttf in Resources */,
+				5D0F18104B7D428990F5A8EC /* Roboto-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
