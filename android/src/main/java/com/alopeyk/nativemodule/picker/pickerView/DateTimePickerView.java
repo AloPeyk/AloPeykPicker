@@ -2,6 +2,7 @@ package com.alopeyk.nativemodule.picker.pickerView;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Typeface;
 import android.util.AttributeSet;
 
 import com.alopeyk.nativemodule.picker.R;
@@ -96,6 +97,28 @@ public class DateTimePickerView extends PickerViewGroup {
         tryPreserveValuesFlag = 0;
     }
 
+    public void setCyclic(boolean cyclic) {
+        if(yearPickerView != null) yearPickerView.setCyclic(cyclic);
+        if(monthPickerView != null) monthPickerView.setCyclic(cyclic);
+        if(dayPickerView != null) dayPickerView.setCyclic(cyclic);
+        if(datePickerView != null) datePickerView.setCyclic(cyclic);
+        if(hourPickerView != null) hourPickerView.setCyclic(cyclic);
+        if(minutePickerView != null) minutePickerView.setCyclic(cyclic);
+        if(timePickerView != null) timePickerView.setCyclic(cyclic);
+    }
+
+    @Override
+    public void setBackgroundColor(int color) {
+        super.setBackgroundColor(color);
+        if(yearPickerView != null) yearPickerView.setBackgroundColor(color);
+        if(monthPickerView != null) monthPickerView.setBackgroundColor(color);
+        if(dayPickerView != null) dayPickerView.setBackgroundColor(color);
+        if(datePickerView != null) datePickerView.setBackgroundColor(color);
+        if(hourPickerView != null) hourPickerView.setBackgroundColor(color);
+        if(minutePickerView != null) minutePickerView.setBackgroundColor(color);
+        if(timePickerView != null) timePickerView.setBackgroundColor(color);
+    }
+
     public void setGradientColors(int[] gradientColors) {
         if(yearPickerView != null) yearPickerView.setGradientColors(gradientColors);
         if(monthPickerView != null) monthPickerView.setGradientColors(gradientColors);
@@ -144,6 +167,16 @@ public class DateTimePickerView extends PickerViewGroup {
         if(hourPickerView != null) hourPickerView.setItemHeight(height);
         if(minutePickerView != null) minutePickerView.setItemHeight(height);
         if(timePickerView != null) timePickerView.setItemHeight(height);
+    }
+
+    public void setTypeFace(Typeface typeFace){
+        if(yearPickerView != null) yearPickerView.setTypeFace(typeFace);
+        if(monthPickerView != null) monthPickerView.setTypeFace(typeFace);
+        if(dayPickerView != null) dayPickerView.setTypeFace(typeFace);
+        if(datePickerView != null) datePickerView.setTypeFace(typeFace);
+        if(hourPickerView != null) hourPickerView.setTypeFace(typeFace);
+        if(minutePickerView != null) minutePickerView.setTypeFace(typeFace);
+        if(timePickerView != null) timePickerView.setTypeFace(typeFace);
     }
 
     public interface OnSelectedDateChangedListener {

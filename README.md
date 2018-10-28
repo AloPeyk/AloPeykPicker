@@ -1,3 +1,4 @@
+
 # alopeyk-picker
 
 ### iOS like Picker plugin for android
@@ -48,9 +49,10 @@ import {PickerView, DatePickerView} from 'alopeyk-picker';
 |---------------------------|-----------------------|-------------|
 |`onSelectedItemChanged`	|`'func'`           	|-            |
 |`selectedItem`				|`'number'`				|-            |
-|`textSize`					|`'number'`            	|-            |
+|`fontSize`					|`'number'`            	|-            |
+|`fontFamily`				|`'string'`            	|-            |
 |`cyclic`					|`'bool'`            	|-            |
-|`textColor`				|`'string'`            	|-            |
+|`color`					|`'string'`            	|-            |
 |`backgroundColor`			|`'string'`            	|-            |
 |`selectedItemBorderColor`	|`'string'`            	|-            |
 |`items`					|`'array'`            	|True         |
@@ -66,8 +68,9 @@ import {PickerView, DatePickerView} from 'alopeyk-picker';
 |`selectedDate`				|`'Date'` `'number'`	|-            |
 |`startDate`				|`'Date'` `'number'`	|-            |
 |`endDate`					|`'Date'` `'number'`	|-            |
-|`textSize`					|`'number'`            	|-            |
-|`textColor`				|`'string'`            	|-            |
+|`fontSize`					|`'number'`            	|-            |
+|`fontFamily`				|`'string'`            	|-            |
+|`color`					|`'string'`            	|-            |
 |`backgroundColor`			|`'string'`            	|-            |
 |`selectedItemBorderColor`	|`'string'`            	|-            |
 |`itemHeight`				|`'number'`            	|-            |

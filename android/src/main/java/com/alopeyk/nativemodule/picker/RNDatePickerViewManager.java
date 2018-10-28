@@ -1,21 +1,23 @@
 package com.alopeyk.nativemodule.picker;
 
 import android.annotation.SuppressLint;
-import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.alopeyk.nativemodule.picker.pickerView.DateTimePickerView;
-import com.alopeyk.nativemodule.picker.pickerView.PickerView;
 import com.alopeyk.nativemodule.picker.pickerView.Utils;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.common.MapBuilder;
-import com.facebook.react.uimanager.SimpleViewManager;
+import com.facebook.react.uimanager.BaseViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
 import com.facebook.react.uimanager.events.RCTEventEmitter;
+import com.facebook.react.views.text.ReactFontManager;
 
 import java.util.Calendar;
 import java.util.Map;
@@ -26,7 +28,7 @@ import java.util.Map;
  * Email:       mahmoodi.dev@gmail.com
  * Website:     alirezamh.com
  */
-public class RNDatePickerViewManager extends SimpleViewManager<DateTimePickerView> {
+public class RNDatePickerViewManager extends BaseViewManager<DateTimePickerView, PickerShadowNode> {
     private static final String VIEW_NAME = "DatePickerView";
 
 
@@ -58,27 +60,6 @@ public class RNDatePickerViewManager extends SimpleViewManager<DateTimePickerVie
         return view;
     }
 
-    @ReactProp(name = "backgroundColor", defaultInt = Color.WHITE, customType = "Color")
-    public void setBackgroundColor(DateTimePickerView view, int backgroundColor) {
-        int gradient[] = new int[]{
-                (backgroundColor & 0x00ffffff) + 0xcf000000,
-                (backgroundColor & 0x00ffffff) + 0x9f000000,
-                (backgroundColor & 0x00ffffff) + 0x5f000000
-        };
-        view.setGradientColors(gradient);
-        view.setBackgroundColor(backgroundColor);
-    }
-
-    @ReactProp(name = "textColor", defaultInt = Color.BLACK, customType = "Color")
-    public void setTextColor(DateTimePickerView view, int textColor) {
-        view.setTextColor(textColor);
-    }
-
-    @ReactProp(name = "textSize", defaultInt = 18)
-    public void setTextSize(DateTimePickerView view, int textSize) {
-        view.setTextSize(Utils.dp(view.getContext(), textSize));
-    }
-
     @ReactProp(name = "selectedDate", defaultDouble = -1)
     public void setSelectedData(DateTimePickerView view, double selectedDate) {
         if(selectedDate < 0) return;
@@ -104,17 +85,6 @@ public class RNDatePickerViewManager extends SimpleViewManager<DateTimePickerVie
         view.setEndDate(calendar);
     }
 
-    @ReactProp(name = "itemHeight", defaultInt = -1)
-    public void setItemHeight(DateTimePickerView view, int height){
-        if(height < 0) return;
-        view.setItemHeight(height);
-    }
-
-    @ReactProp(name = "selectedItemBorderColor", defaultInt = 0x7f777777, customType = "Color")
-    public void setSelectedItemBorderColor(DateTimePickerView view, int color) {
-        view.setSelectedItemBorderColor(color);
-    }
-
     @javax.annotation.Nullable
     @Override
     public Map<String, Object> getExportedCustomBubblingEventTypeConstants() {
@@ -127,5 +97,36 @@ public class RNDatePickerViewManager extends SimpleViewManager<DateTimePickerVie
         ((ReactContext)view.getContext())
                 .getJSModule(RCTEventEmitter.class)
                 .receiveEvent(view.getId(), eventName, params);
+    }
+
+    @Override
+    public PickerShadowNode createShadowNodeInstance() {
+        return new PickerShadowNode();
+    }
+
+    @Override
+    public Class<? extends PickerShadowNode> getShadowNodeClass() {
+        return PickerShadowNode.class;
+    }
+
+    @Override
+    public void updateExtraData(DateTimePickerView root, Object extraData) {
+        PickerUpdate update = (PickerUpdate) extraData;
+        root.setLayoutParams(new ViewGroup.LayoutParams((int)update.getWidth(), (int)update.getHeight()));
+        root.setBackgroundColor(update.getBackgroundColor());
+        root.setCyclic(update.isCyclic());
+        root.setItemHeight(Utils.dp(root.getContext(), update.getItemHeight()));
+        root.setSelectedItemBorderColor(update.getSelectedItemBorderColor());
+        root.setTextSize(Utils.dp(root.getContext(), update.getFontSize()));
+        root.setTextColor(update.getColor());
+
+        if(!update.getFontFamily().isEmpty()){
+            Typeface typeface = ReactFontManager.getInstance().getTypeface(
+                    update.getFontFamily(),
+                    update.getFontStyle(),
+                    root.getContext().getAssets());
+
+            root.setTypeFace(typeface);
+        }
     }
 }

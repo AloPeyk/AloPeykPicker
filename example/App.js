@@ -32,26 +32,22 @@ export default class App extends Component<Props> {
             <Text style={styles.label}>{this.state.picker2}</Text>
           </View>
           <View style={styles.row}>
-            <PickerView 
-              backgroundColor="#f2f2f2"
-              textColor="#f33"
+            <PickerView
+              style={[styles.pickerView, styles.light]} 
+              color="#f33"
               items={getData('foo', 10)}
               itemHeight={30}
               selectedItem={2}
-              textSize={18}
-              onSelectedItemChanged={ (e) => {this.setState({picker1: e.label})} }
-              style={styles.pickerView} />
+              onSelectedItemChanged={ (e) => {this.setState({picker1: e.label})} }/>
 
               <PickerView 
-              backgroundColor="#f2f2f2"
-              textColor="#333"
+              style={styles.pickerView} 
+              color="#333"
               cyclic={false}
               items={getData('bar', 20)}
               itemHeight={30}
               selectedItem={6}
-              textSize={18} 
-              onSelectedItemChanged={ (e) => {this.setState({picker2: e.label})} }
-              style={styles.pickerView} />
+              onSelectedItemChanged={ (e) => {this.setState({picker2: e.label})} }/>
             </View>
         </View>
 
@@ -59,16 +55,14 @@ export default class App extends Component<Props> {
             <Text style={styles.label}>{this.state.picker3}</Text>
             <View style={styles.row}>
               <DatePickerView
-                backgroundColor="#333"
+                style={[[styles.pickerView, styles.dark, styles.light]]}
                 selectedItemBorderColor="#777"
-                textColor="#ccc"
-                textSize={18}
-                itemHeight={90}
+                color="#ccc"
+                itemHeight={30}
                 startDate={new Date('2016','05','15')}
                 endDate={new Date('2019','10','10')}
                 selectedDate={new Date('2018','9','8')}
-                onSelectedItemChanged={ (e) => {this.setState({picker3: e.timeString})} }
-                style={styles.pickerView} />
+                onSelectedItemChanged={ (e) => {this.setState({picker3: e.timeString})} } />
             </View>
         </View>
       </View>
@@ -101,8 +95,10 @@ const styles = StyleSheet.create({
   },
   pickerView: {
     flex: 1,
-    height: 100,
+    height: 150,
     marginTop: 20,
+    backgroundColor: '#f2f2f2',
+    fontSize: 18,
   },
   row: {
     flexDirection: 'row',
@@ -126,4 +122,7 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     paddingBottom: 30,
   },
+  light: {
+    fontFamily: 'Roboto-Light', 
+  }
 });
