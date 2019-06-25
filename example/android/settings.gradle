@@ -1,5 +1,4 @@
-rootProject.name = 'example'
+rootProject.name = 'PickerDemo'
 include ':alopeyk-picker'
 project(':alopeyk-picker').projectDir = new File(rootProject.projectDir, '../node_modules/alopeyk-picker/android')
-
 include ':app'

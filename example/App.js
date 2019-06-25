@@ -16,10 +16,17 @@ export default class App extends Component<Props> {
   constructor() {
       super()
       this.state = {
-         picker1: '-',
-         picker2: '-',
-         picker3: '-',
+        randomSelectedItem: 0,
+        picker1: '-',
+        picker2: '-',
+        picker3: '-',
       }
+
+      setInterval(() => { 
+        var item = this.state.randomSelectedItem + 1;
+        if(item > 5) item = 0;
+        this.setState({randomSelectedItem: item});
+      }, 1000);
    }
 
   render() {
@@ -37,8 +44,10 @@ export default class App extends Component<Props> {
               color="#f33"
               items={getData('foo', 10)}
               itemHeight={30}
-              selectedItem={2}
-              onSelectedItemChanged={ (e) => {this.setState({picker1: e.label})} }/>
+              selectedItem={this.state.randomSelectedItem}
+              onSelectedItemChanged={ (e) => {this.setState({picker1: e.label});
+            }
+               }/>
 
               <PickerView 
               style={styles.pickerView} 
