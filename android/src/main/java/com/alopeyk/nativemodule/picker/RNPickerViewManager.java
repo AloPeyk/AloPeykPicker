@@ -31,12 +31,12 @@ import java.util.Map;
  * Website:     alirezamh.com
  */
 public class RNPickerViewManager extends BaseViewManager<PickerView, PickerShadowNode> {
-    private static final String VIEW_NAME = "PickerView";
+    public static final String REACT_CLASS = "PickerView";
     private static final String TAG = RNPickerViewManager.class.getSimpleName();
 
     @Override
     public String getName() {
-        return VIEW_NAME;
+        return REACT_CLASS;
     }
 
     @Override

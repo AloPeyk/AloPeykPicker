@@ -31,7 +31,7 @@ public class PickerShadowNode extends LayoutShadowNode {
     }
 
     public PickerShadowNode(PickerShadowNode node){
-        super(node);
+        super();
         mFontFamily = node.mFontFamily;
         mBackgroundColor = node.mBackgroundColor;
         mFontStyle = node.mFontStyle;
@@ -42,7 +42,7 @@ public class PickerShadowNode extends LayoutShadowNode {
         mCyclic = node.mCyclic;
     }
 
-    @Override
+    //@Override
     protected LayoutShadowNode copy() {
         return new PickerShadowNode(this);
     }

@@ -29,12 +29,12 @@ import java.util.Map;
  * Website:     alirezamh.com
  */
 public class RNDatePickerViewManager extends BaseViewManager<DateTimePickerView, PickerShadowNode> {
-    private static final String VIEW_NAME = "DatePickerView";
+    public static final String REACT_CLASS = "DatePickerView";
 
 
     @Override
     public String getName() {
-        return VIEW_NAME;
+        return REACT_CLASS;
     }
 
     @Override

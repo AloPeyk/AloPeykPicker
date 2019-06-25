@@ -19,6 +19,7 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
+import android.view.ViewGroup;
 import android.widget.OverScroller;
 
 import com.alopeyk.nativemodule.picker.R;
@@ -772,5 +773,16 @@ public class PickerView extends View {
         if(typeFace == null || typeFace.equals(this.typeface)) return;
         this.typeface = typeFace;
         invalidate();
+    }
+
+    @Override
+    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        super.onLayout(changed, left, top, right, bottom);
+
+        try{
+            ((ViewGroup) getParent()).setClipChildren(true);
+        }catch (Exception ignored){
+
+        }
     }
 }
