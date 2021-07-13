@@ -47,10 +47,10 @@ public class PickerShadowNode extends LayoutShadowNode {
         return new PickerShadowNode(this);
     }
 
-    @Override
-    public void onBeforeLayout() {
-        super.onBeforeLayout();
-    }
+    // @Override
+    // public void onBeforeLayout() {
+    //     super.onBeforeLayout();
+    // }
 
     @Override
     public void onCollectExtraUpdates(UIViewOperationQueue uiViewOperationQueue) {
